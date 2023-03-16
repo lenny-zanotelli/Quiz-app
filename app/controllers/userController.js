@@ -8,6 +8,9 @@ const userController = {
     signupPage(req, res) {
         res.render('signup');
     },
+    profilePage(req, res){
+        res.render('profile');
+    },
     async signupAction(req, res) {
         try {
             const result = await User.findOne({
@@ -77,6 +80,11 @@ const userController = {
             res.redirect('/login');
         }
 
+    },
+
+    logOut(req, res) {
+        req.session.user = false;
+        res.redirect('/');
     }
 
 }

@@ -1,0 +1,10 @@
+<%- include('partials/header') %>
+
+<% if (locals.user)  { %>
+<div>
+   Hello !  <%= locals.user.lastname %> <%= locals.user.firstname %> 
+</div>
+<% } else { %> 
+<div>Vous devez être connecté pour accéder à cette page</div>
+    <% } %> 
+<%- include('partials/footer') %>

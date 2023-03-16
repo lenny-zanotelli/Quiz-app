@@ -1,0 +1,18 @@
+<%- include('partials/header') %>
+<%# if (locals.user)  { %>
+<h1 class="h1 font-weight-bold mb-4">Les Sujets :</h1>
+
+        <div class="card-deck row mb-3 text-center">
+
+            <% for (const tag of result){%>
+                <div class="col-4 d-flex flex-column">
+                     <a href="/tags/<%=tag.id%>" class="btn btn-lg btn-block btn-primary text-black mt-3 mb-3 tag--<%= tag.name.toLowerCase() %>"><%= tag.name %></a>
+                </div>  
+            <%} %>
+            <%# } else { %>
+                <div>Vous devez être connecté pour accéder à cette page</div>
+            <%# } %>
+
+        </div>
+
+<%- include('partials/footer') %>

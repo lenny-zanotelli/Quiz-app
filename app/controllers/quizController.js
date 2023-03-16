@@ -12,7 +12,6 @@ const quizController = {
                     {association: 'tags'}
                 ]
             });
-            console.log(JSON.stringify(result, null, 2));
             res.render('quizDetail', {result});
         } catch (error) {
             console.log(error);

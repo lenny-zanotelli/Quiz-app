@@ -1,0 +1,25 @@
+{
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "description": "## Table of Contents - [Quiz-App](#quiz-app)   - [Table of Contents](#table-of-contents)   - [About](#about)   - [Technologies Used](#technologies-used)   - [Description of features](#description-of-features)   - [Setup](#setup)   - [Usage](#usage)   - [Project Status](#project-status)   - [Room for Improvement](#room-for-improvement)   - [Acknowledgements](#acknowledgements)   - [Contact](#contact)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lenny-zanotelli/Quiz-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lenny-zanotelli/Quiz-app/issues"
+  },
+  "homepage": "https://github.com/lenny-zanotelli/Quiz-app#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}

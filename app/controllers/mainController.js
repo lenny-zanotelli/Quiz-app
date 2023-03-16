@@ -1,8 +1,16 @@
+const {Quiz} = require('../models')
+
 const mainController = {
-    homePage(req, res) {
-        res.send('Hello');
-
-
+    async homePage(req, res) {
+        try {
+            const result = await Quiz.findAll({
+                include: ['author']
+            });
+            res.render('home', {result, isHomePage: true});
+        } catch (error) {
+            console.log(error)
+        
+        }
     }
 }
 

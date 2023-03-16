@@ -1,0 +1,44 @@
+<%- include('partials/header') %>
+
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h2 class="h1 display-4"><%= result.title %></h2>
+    <p class="lead"> <%= result.description %></p>
+</div>
+
+  <!-- on rajoute les tags-->
+  <div class="row">
+    <% for (const tag of result.tags) { %>
+        <h3 class="tag--<%=tag.name.toLowerCase()%> tag badge rounded-pill d-inline-block mb-2 
+"> <%= tag.name %></h3>
+    
+   <% } %>
+  </div>
+
+<div class="card-deck row mb-3 text-center">
+    <!-- On liste les questions-->
+    <% for (const question of result.questions) { %> 
+        <div class="col-12">
+            <label class="badge level level--<%= question.level.name.toLowerCase() %>"><%= question.level.name %></label>
+            <h4>
+                <%= question.question %>
+            </h4>
+            <ul>
+                <% for(let index in question.answers){ %>
+                <li><%= parseInt(index) + 1 %>. <%= question.answers[index].description %></li>
+                <% } %>
+            </ul>
+        </div>
+    
+    <% } %> 
+
+
+
+
+</div>
+
+
+</div>
+
+
+<%- include('partials/footer') %>

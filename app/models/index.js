@@ -13,7 +13,7 @@ User.hasMany(Quiz, {
 
 Quiz.belongsTo(User, {
     foreignKey: "user_id",
-    as: "quizzes"
+    as: "author"
 });
 
 // Quiz <-> Tag (Many to many)
@@ -55,7 +55,6 @@ Question.belongsTo(Level, {
     foreignKey: "level_id",
     as: "level"
 });
-
 
 // réponses générales : 
 // Question <-> Answer (One to Many)

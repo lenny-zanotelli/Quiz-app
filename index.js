@@ -4,7 +4,9 @@ const express = require('express');
 const router = require('./app/router');
 const path = require('path');
 const session = require('express-session');
-const userMiddleware = require('./app/middleware/auth');
+
+const userMiddleware = require('./app/middleware/user');
+const adminMiddleware = require('./app/middleware/admin');
 
 
 const PORT = process.env.PORT || 3000;
@@ -29,7 +31,9 @@ app.set('views', './app/views');
 
 app.use(express.static(path.join(__dirname, './assets')));
 
-app.use(userMiddleware.showUserDetail);
+app.use(adminMiddleware);
+app.use(userMiddleware);
+
 
 
 app.use(router);

@@ -5,7 +5,7 @@ const tagController = require('./controllers/tagController');
 const userController = require('./controllers/userController');
 const adminController = require('./controllers/adminController');
 
-const userMiddleware = require('./middleware/auth');
+const adminMiddleware = require('./middleware/admin');
 
 const router = express.Router();
 
@@ -28,6 +28,6 @@ router.get('/profile', userController.profilePage);
 router.get('/logout', userController.logOut);
 
 // route ADMIN
-router.get('/admin', userMiddleware.isNotLogged, adminController.adminPage);
+router.get('/admin', adminMiddleware, adminController.adminPage);
 
 module.exports = router;

@@ -22,14 +22,19 @@
 ## Technologies Used
 
 - *Front-end*
-  
-
-
+  - HTML/CSS
+  - Bootstrap
+  - 
 - *Back-end*
+  - Node.js
+  - Express.js
+  - Postgres
+  - ORM Sequelize
+  - EJS
   
-
-
 ## Description of features
+
+
 
 
 ## Setup

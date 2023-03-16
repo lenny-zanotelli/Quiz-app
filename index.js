@@ -6,8 +6,6 @@ const path = require('path');
 const session = require('express-session');
 
 const userMiddleware = require('./app/middleware/user');
-const adminMiddleware = require('./app/middleware/admin');
-
 
 const PORT = process.env.PORT || 3000;
 
@@ -31,13 +29,10 @@ app.set('views', './app/views');
 
 app.use(express.static(path.join(__dirname, './assets')));
 
-app.use(adminMiddleware);
 app.use(userMiddleware);
-
-
 
 app.use(router);
 
 app.listen(PORT, ()=>{
-    console.log(`Currently listening on http://localhost:${PORT}`);
+    console.log(`Listening on http://localhost:${PORT}`);
 })

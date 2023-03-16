@@ -1,7 +1,6 @@
 
 const userMiddleware = (req, res, next) => {
-    // req.session est conservé entre chaque page, cependant, on souhaite aussi que user soit accessible côté view sans envoyer de variables à la vue (ce qui dégorge nos appels de res.render, pas besoin d'écrire ça à chaque fois ? 
-    
+
     if (req.session.user) {
        
         console.log(req.session.user);
